@@ -814,6 +814,13 @@ UpsideDownCake = BuildRelease(
     # This build release supports the use_source_config_var property.
     preferHandling=PreferHandling.USE_SOURCE_CONFIG_VAR_PROPERTY,
 )
+VanillaIceCream = BuildRelease(
+    name="VanillaIceCream",
+    # Generate a snapshot for this build release using Soong.
+    creator=create_sdk_snapshots_in_soong,
+    # This build release supports the use_source_config_var property.
+    preferHandling=PreferHandling.USE_SOURCE_CONFIG_VAR_PROPERTY,
+)
 
 # Insert additional BuildRelease definitions for following releases here,
 # before LATEST.
@@ -1050,6 +1057,12 @@ MAINLINE_MODULES = [
         # Conscrypt was updatable in R but the generate_ml_bundle.sh does not
         # appear to generate a snapshot for it.
         for_r_build=None,
+        last_optional_release=LATEST,
+    ),
+    MainlineModule(
+        apex="com.android.crashrecovery",
+        sdks=["crashrecovery-sdk"],
+        first_release=VanillaIceCream,
         last_optional_release=LATEST,
     ),
     MainlineModule(
