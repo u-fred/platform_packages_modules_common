@@ -1175,25 +1175,21 @@ MAINLINE_MODULES = [
         apex="com.android.ipsec",
         sdks=["ipsec-module-sdk"],
         first_release=R,
-        for_r_build=ForRBuild(
-            sdk_libraries=[
-                SdkLibrary(
-                    name="android.net.ipsec.ike",
-                    shared_library=True,
-                ),
-            ]
-        ),
+        for_r_build=ForRBuild(sdk_libraries=[
+            SdkLibrary(
+                name="android.net.ipsec.ike",
+                shared_library=True,
+            ),
+        ]),
         last_optional_release=LATEST,
     ),
     MainlineModule(
         apex="com.android.media",
         sdks=["media-module-sdk"],
         first_release=R,
-        for_r_build=ForRBuild(
-            sdk_libraries=[
-                SdkLibrary(name="framework-media"),
-            ]
-        ),
+        for_r_build=ForRBuild(sdk_libraries=[
+            SdkLibrary(name="framework-media"),
+        ]),
         last_optional_release=LATEST,
     ),
     MainlineModule(
@@ -1251,33 +1247,27 @@ MAINLINE_MODULES = [
         apex="com.android.sdkext",
         sdks=["sdkextensions-sdk"],
         first_release=R,
-        for_r_build=ForRBuild(
-            sdk_libraries=[
-                SdkLibrary(name="framework-sdkextensions"),
-            ]
-        ),
+        for_r_build=ForRBuild(sdk_libraries=[
+            SdkLibrary(name="framework-sdkextensions"),
+        ]),
         last_optional_release=LATEST,
     ),
     MainlineModule(
         apex="com.android.os.statsd",
         sdks=["statsd-module-sdk"],
         first_release=R,
-        for_r_build=ForRBuild(
-            sdk_libraries=[
-                SdkLibrary(name="framework-statsd"),
-            ]
-        ),
+        for_r_build=ForRBuild(sdk_libraries=[
+            SdkLibrary(name="framework-statsd"),
+        ]),
         last_optional_release=LATEST,
     ),
     MainlineModule(
         apex="com.android.tethering",
         sdks=["tethering-module-sdk"],
         first_release=R,
-        for_r_build=ForRBuild(
-            sdk_libraries=[
-                SdkLibrary(name="framework-tethering"),
-            ]
-        ),
+        for_r_build=ForRBuild(sdk_libraries=[
+            SdkLibrary(name="framework-tethering"),
+        ]),
         last_optional_release=LATEST,
     ),
     MainlineModule(
